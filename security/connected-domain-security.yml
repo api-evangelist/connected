@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts (no OpenAPI in repo)
+note: connectedhq.com publishes no A or CNAME record and serves no content, so no TLS/HSTS
+  posture can be observed. The zone is still actively managed (SPF, DMARC p=reject, RFC 7505
+  null MX) which is consistent with a domain held defensively by the acquirer rather than
+  abandoned. See apis.yml x-domain-note.
+hosts:
+- host: connectedhq.com
+  https: false
+  resolves: false
+  http_status: null
+  note: DNS resolution failed (no A/CNAME record); host serves no site.
+domains:
+- domain: connectedhq.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+  null_mx: true
+  registrar: MarkMonitor Inc.
+  created: '2010-03-08'
+  registry_expiry: '2027-03-08'
+  nameservers:
+  - dns1.p09.nsone.net
+  - dns2.p09.nsone.net
+  - dns3.p09.nsone.net
+  - dns4.p09.nsone.net
+  - ns1-42.azure-dns.com
+  - ns2-42.azure-dns.net
+  - ns3-42.azure-dns.org
+  - ns4-42.azure-dns.info

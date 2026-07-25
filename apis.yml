@@ -1,19 +1,53 @@
 aid: connected
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/connected.png
 name: Connected
-description: Connected is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Connected (Connected HQ, Inc.) was a social CRM and contact-management startup
+  that pulled a user's address book, email and social accounts together into a single
+  continuously-updated relationship manager. Backed by 500 Global, it was acquired by LinkedIn
+  in October 2011 and folded into the LinkedIn-branded "Connected" product, after which the
+  standalone service was retired. Connected never shipped a public developer program, API,
+  SDK or documentation. The connectedhq.com domain is still defensively held by the acquirer
+  (MarkMonitor registrar, Azure DNS and NS1 nameservers, SPF and DMARC p=reject, RFC 7505
+  null MX) but publishes no A record and serves no content. This profile is retained as a
+  historical record; there is no API surface to enrich.
 url: https://raw.githubusercontent.com/api-evangelist/connected/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: defunct-no-api-surface
+x-status: acquired
+x-acquired-by: linkedin
+x-acquired-date: '2011-10'
+x-domain-status: parked-by-acquirer
+x-domain-note: connectedhq.com (created 2010-03-08, registry expiry 2027-03-08) remains under
+  MarkMonitor with Azure DNS + NS1 nameservers and an RFC 7505 null MX, consistent with a
+  domain held defensively by LinkedIn/Microsoft after the acquisition. It resolves no A or
+  CNAME record and serves no site, so it is deliberately not wired as a Website pointer.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Defunct
+- Acquired
+- CRM
+- Contacts
+- Address Book
+- Relationship Management
+- Social
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +55,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
-- type: Website
-  url: https://connectedhq.com
+- type: DomainSecurity
+  url: security/connected-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
