@@ -36,7 +36,7 @@ x-domain-note: connectedhq.com (created 2010-03-08, registry expiry 2027-03-08) 
   MarkMonitor with Azure DNS + NS1 nameservers and an RFC 7505 null MX, consistent with a
   domain held defensively by LinkedIn/Microsoft after the acquisition. It resolves no A or
   CNAME record and serves no site, so it is deliberately not wired as a Website pointer.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
